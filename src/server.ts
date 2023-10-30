@@ -7,6 +7,7 @@ import { sendOtp } from './handlers/user'
 const app = express()
 
 // app.use(express.static('public'))
+app.use(express.json());// when we send JSON object, for the post request to understand its a json body or json object
 app.get('/',(req,res) => {
     console.log("Server is Running")
     res.status(200)
